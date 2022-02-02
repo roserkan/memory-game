@@ -1,0 +1,6 @@
+.dashboard{
+    background: var(--primary-dark);
+    color: var(--light-color);
+    height: 100vh;
+}
+

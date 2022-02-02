@@ -1,0 +1,137 @@
+.game{
+    background: var(--primary-dark);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: .5rem;
+}
+
+.game .row{
+    display: flex;
+    column-gap: .5rem;
+}
+
+
+.flip-box {
+    background-color: rgb(63, 63, 168);
+    width: 120px;
+    height: 120px;
+    border: 1px solid #ddd;
+    perspective: 1000px;
+    cursor: pointer;
+    border-radius: 4px;
+    user-select: none;
+}
+
+
+
+.flip-box img{
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.game .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    pointer-events: none !important;
+}
+  
+.rotated {
+    transform: rotateY(180deg) !important;
+    pointer-events: none !important;
+    
+}
+.done {
+    transform: rotateY(180deg) !important;
+    pointer-events: none !important;
+}
+  
+.game .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+  
+.game.flip-box-front {
+    background-color: #bbb;
+    color: black;
+}
+  
+.game .flip-box-back {
+    background-color: #555;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.game .circle-shape{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: chocolate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.game .time{
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    font-size: 24px;
+    color: #ddd;
+    user-select: none;
+}
+
+.game .clickCount{
+    position: absolute;;
+    right: 8%;
+    top: 2%;
+    font-size: 24px;
+    color: #ddd;
+    user-select: none;
+}
+
+.finish{
+    width: 30%;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5rem;
+    border-radius: 8px;
+    background: var(--light-color);
+    display: none;
+}
+.finish .point{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.finish .actions{
+    display: flex;
+    column-gap: 2rem;
+}
+.opened-finish{
+    display: flex !important;
+}
+

@@ -1,0 +1,59 @@
+.wrapper .container{
+    background: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 256px;
+    height: 100%;
+    background: var(--primary-dark);
+    color: var(--light-color);
+}
+
+.wrapper .container #brand{
+    padding: 1rem 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.brand-image{
+    width: 50px;
+}
+
+.deneme{
+    background-color: red !important;
+}
+
+.wrapper .container-sm{
+    width: 80px;
+}
+#brand .rm-text{
+    display: none;
+}
+#collapsed-btn{
+    width: 80px;
+    height: 40px;
+    position: absolute;
+    bottom: 3%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #ddd;
+}
+
+
+.wrapper .navbar{
+    flex-direction: row-reverse !important;
+    background: var(--primary-dark);
+    color: var(--light-color);
+    height: 70px;
+    align-items: center !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: none;
+}
